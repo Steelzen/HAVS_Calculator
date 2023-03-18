@@ -74,7 +74,6 @@ button {
   max-width: 100%;
   align-items: center;
   justify-content: center;
-  padding: 10px 20px 10px 20px;
 }
 
 .input-section > div {
@@ -112,7 +111,7 @@ button {
 }
 
 #cal-btn-wrapper {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 0 10px 0;
   text-align: right;
 }
 
@@ -246,10 +245,6 @@ button {
 
   #minutes {
     width: 100%;
-  }
-
-  #cal-btn-wrapper {
-    padding: 10px 20px 10px 20px;
   }
 }
 
