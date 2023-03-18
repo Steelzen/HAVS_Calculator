@@ -1,0 +1,118 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <main class="content-wrapper">
+      <h1 id="calculator-title">HAVS Calculator</h1>
+      <form id="havs-calculator">
+        <div id="calculator-wrapper">
+          <div class="input-section" id="input-section">
+            <div id="tool-name-section">
+              <label for="tool-name" class="cal-label">Tool</label>
+              <p class="input-help validation-check" id="tool-name-help">
+                What tool are you using?
+              </p>
+              <input
+                type="text"
+                class="input-field validation-check"
+                id="tool-name"
+                name="tool-name"
+                placeholder="e.g. Hammer drill"
+              />
+            </div>
+            <div id="output-section">
+              <label for="output" class="cal-label">Output (m/s²)</label>
+              <p class="input-help validation-check" id="output-help">
+                What vibration level?
+              </p>
+              <input
+                type="number"
+                class="input-field validation-check"
+                id="output"
+                name="output"
+                placeholder="10"
+              />
+            </div>
+            <div id="minutes-section">
+              <label for="minutes" class="cal-label">Minutes</label>
+              <p class="input-help validation-check" id="minutes-help">
+                How long will you use it?
+              </p>
+              <input
+                type="number"
+                class="input-field validation-check"
+                id="minutes"
+                name="minutes"
+                placeholder="90"
+              />
+            </div>
+          </div>
+          <div id="cal-btn-wrapper">
+            <button type="button" class="btn-primary" onclick="calculate()">
+              Calculate
+            </button>
+          </div>
+        </div>
+      </form>
+      <div class="result-section">
+        <h4 id="result-title">RESULT</h3>
+        <h2>
+          <span id="result-percent">0%</span>
+        </h3>
+        <div class="percentage-bar">
+            <div class="percentage-fill"></div>
+        </div>
+        <span id="result-statement"
+          >A tool with a vibration output of 0m/s² reaches the EAV (Exposure
+          Action Value) in 0hrs:0mins and the ELV (Exposure Limit Value) in
+          0hrs:0mins.</span
+        >
+        <span id="result-point-and-DA">
+          Let's get started, use the calculator to find out your vibration
+          exposure!
+        </span>
+      </div>
+      <h1 id="register-title">HAVS Register</h1>
+      <div class="register-wrapper">
+      <div class="register-table-container">
+        <table class="table table-striped" id="register-table">
+          <thead>
+            <tr>
+              <th>Tool</th>
+              <th>Output</th>
+              <th>Minutes</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody id="register-table-body">
+            <tr id="initial-message-row">
+              <td id="toolname-part">Waiting for your first exposure...</td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>      
+    </div>
+        <div class="total-points-container">
+          <h2>
+            <span id="total-points">Total Points: 0</span>
+          </h2>
+        </div>
+        <div class="judgement-container">
+          <span id="judgement-message" style="color: green"
+            ><strong>Looking good!</strong> So far, you're under the exposure
+            action value - keep working safely.</span
+          >
+        </div>
+    </div>
+    </main>
+  </body>
+  <script type="text/javascript" src="HAVS_Calculation.js"></script>
+</html>

@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+p {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+/* Table styling */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  color: #333;
+}
+
+button {
+  cursor: pointer;
+}
+
+.content-wrapper {
+  width: 85%;
+  margin: 10px auto;
+}
+
+/** Calculator **/
+#calculator-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.input-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px 10px 20px;
+}
+
+.input-section > div {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cal-label {
+  font-weight: bold;
+  font-size: 20;
+}
+
+.input-help {
+  font-size: 12;
+}
+
+.input-field {
+  min-width: 200px;
+  line-height: 2;
+  border-width: 0.5;
+  box-shadow: none;
+  border-width: 1px;
+  border-color: transparent;
+  border-radius: 0.25rem;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 1rem;
+  background-color: rgb(244, 239, 233);
+}
+
+#calculator-wrapper > button {
+  align-self: flex-end;
+}
+
+#cal-btn-wrapper {
+  padding: 10px 20px 10px 20px;
+  text-align: right;
+}
+
+.btn-primary {
+  background-color: #4caf50;
+  font-weight: bold;
+  font-size: 14;
+  color: white;
+  padding: 12px 13px;
+  border: none;
+  border-radius: 4px;
+}
+
+.btn-primary:hover {
+  background-color: #3e8e41;
+}
+
+/* Result box */
+.result-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 100%;
+  background-color: aliceblue;
+  padding: 10px;
+}
+
+.result-section > h4 {
+  margin-bottom: 0px;
+}
+
+.result-section > span {
+  margin-bottom: 5px;
+}
+
+#result-point-and-DA {
+  font-weight: bold;
+}
+
+.percentage-bar {
+  height: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10px;
+}
+.percentage-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #007bff;
+  transition: width 0.3s ease-in-out;
+}
+
+/** Register **/
+#register-title {
+  margin-top: 60px;
+}
+
+/* Table */
+#register-table {
+  width: 100%;
+}
+
+.register-table-container {
+  overflow-x: auto;
+}
+
+.td-toolname {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delbtn {
+  border: none;
+  background-color: transparent;
+  background-image: none;
+  margin-right: 5rem;
+  font-weight: bold;
+}
+
+.total-points-container {
+  text-align: right;
+}
+
+.judgement-container {
+  background-color: aliceblue;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* // Small devices (landscape phones, 576px and above till next break point) */
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and above till next break point) */
+@media (min-width: 768px) {
+  .content-wrapper {
+    width: 70%;
+  }
+
+  .input-section {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .input-section > div {
+    flex: 33%;
+    align-content: space-between;
+  }
+
+  #tool-name-section {
+    min-width: 65%;
+  }
+
+  #output-section,
+  #minutes-section {
+    min-width: 50%;
+  }
+
+  #tool-name {
+    min-width: 95%;
+    width: 100%;
+  }
+
+  #output,
+  #minutes {
+    min-width: 90%;
+  }
+
+  #minutes {
+    width: 100%;
+  }
+
+  #cal-btn-wrapper {
+    padding: 10px 20px 10px 20px;
+  }
+}
+
+/* // Large devices (desktops, 992px and above till next break point) */
+@media (min-width: 992px) {
+  #tool-name-section,
+  #output-section,
+  #minutes-section {
+    min-width: 0;
+  }
+
+  #tool-name,
+  #output,
+  #minutes {
+    min-width: 13rem;
+  }
+
+  #tool-name {
+    width: auto;
+  }
+
+  #minutes {
+    width: 100%;
+  }
+}
+
+/*  For desktop */
+@media (min-width: 1227px) {
+  .input-section > div {
+    align-content: space-between;
+  }
+  #tool-name-section {
+    flex: 45%;
+  }
+  #output-section,
+  #minutes-section {
+    flex: 20%;
+  }
+  #tool-name {
+    min-width: 90%;
+  }
+}
+
+/* For Tablet */
+
+/* For Mobile */
